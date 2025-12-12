@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Weather App</h1>
+        
+        <form class="weatherform">
+            <div class="inputGroup">
+                <input type="text" class="cityInput" placeholder="Enter city name..." autocomplete="off">
+                <button type="submit" class="searchBtn">Search</button>
+                <button type="button" class="geoBtn" title="Get weather for your location">Current Location Weather</button>
+            </div>
+            <div class="toggleGroup">
+                <label class="toggle">
+                    <input type="checkbox" class="tempToggle">
+                    <span class="toggleLabel">°F</span>
+                </label>
+            </div>
+        </form>
+
+        <div id="loading-skeleton" class="card skeleton-card" style="display: none;">
+            <div class="skeleton skeleton-text" style="width: 50%; height: 30px; margin: 0 auto 10px;"></div>
+            <div class="skeleton skeleton-text" style="width: 30%; height: 60px; margin: 0 auto 10px;"></div>
+            <div class="skeleton skeleton-text" style="width: 40%; height: 20px; margin: 0 auto 30px;"></div>
+            <div class="skeleton skeleton-circle" style="width: 100px; height: 100px; margin: 0 auto 30px;"></div>
+            <div class="details-grid-skeleton" style="display: flex; justify-content: space-between; gap: 10px;">
+                <div class="skeleton skeleton-text" style="width: 48%; height: 50px;"></div>
+                <div class="skeleton skeleton-text" style="width: 48%; height: 50px;"></div>
+            </div>
+        </div>
+
+        <div id="weather-data" class="card" style="display:none;">
+        </div>
+
+        <div class="errorContainer"></div>
+    </div>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
