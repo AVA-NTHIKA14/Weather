@@ -174,8 +174,8 @@ body {
 }
 
 .card.clear {
-    background: rgba(255, 223, 100, 0.7);
-    border-color: rgba(255, 200, 50, 0.6);
+    background: rgba(221, 100, 255, 0.7);
+    border-color: rgba(184, 33, 194, 0.6);
 }
 
 .card.clouds {
@@ -380,6 +380,83 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+.forecastTitle {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-out;
+}
+
+.forecastContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.forecastCard {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: slideUp 0.6s ease-out;
+}
+
+.forecastCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.forecastDay {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.forecastIcon {
+    font-size: 2.5rem;
+    margin: 8px 0;
+    animation: bounce 0.6s ease-out;
+}
+
+.forecastTemp {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 8px 0;
+}
+
+.forecastDescription {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.forecastDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+
+.forecastDetail {
+    font-size: 0.8rem;
+    color: #777;
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
@@ -420,6 +497,31 @@ body {
     .weatherDetails {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+
+    .forecastContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .forecastCard {
+        padding: 12px;
+    }
+
+    .forecastIcon {
+        font-size: 2rem;
+    }
+
+    .forecastTemp {
+        font-size: 1.2rem;
+    }
+
+    .forecastDay {
+        font-size: 0.85rem;
+    }
+
+    .forecastDetail {
+        font-size: 0.75rem;
     }
 }
 
@@ -464,6 +566,40 @@ body {
 
     .detailValue {
         font-size: 1.2rem;
+    }
+
+    .forecastContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .forecastCard {
+        padding: 10px;
+    }
+
+    .forecastIcon {
+        font-size: 1.8rem;
+    }
+
+    .forecastTemp {
+        font-size: 1rem;
+    }
+
+    .forecastDay {
+        font-size: 0.75rem;
+    }
+
+    .forecastDescription {
+        font-size: 0.75rem;
+    }
+
+    .forecastDetail {
+        font-size: 0.7rem;
+    }
+
+    .forecastTitle {
+        font-size: 1.2rem;
+        margin: 20px 0 15px 0;
     }
 }
 

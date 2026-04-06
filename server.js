@@ -5,6 +5,10 @@ const axios = require("axios");
 const app = express();
 app.use(express.static("public"));
 
+app.get("/api/config", (req, res) => {
+  res.json({ apiKey: process.env.API_KEY });
+});
+
 app.get("/weather", async (req, res) => {
   try {
     const city = req.query.city;
@@ -15,6 +19,19 @@ app.get("/weather", async (req, res) => {
 
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch weather" });
+  }
+});
+
+app.get("/forecast", async (req, res) => {
+  try {
+    const city = req.query.city;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.API_KEY}&units=metric`;
+    
+    const { data } = await axios.get(url);
+    res.json(data);
+
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch forecast" });
   }
 });
 
