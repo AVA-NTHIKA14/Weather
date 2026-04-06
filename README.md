@@ -103,7 +103,7 @@ Weather/
 - Current Weather: `https://api.openweathermap.org/data/2.5/weather`
 - 5-Day Forecast: `https://api.openweathermap.org/data/2.5/forecast`
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 **Backend:**
 - Node.js
@@ -120,19 +120,6 @@ Weather/
 **Tools:**
 - npm (Package management)
 - Git (Version control)
-
-## 🎨 Design Features
-
-- **Gradient Background** - Beautiful purple gradient
-- **Glass Morphism** - Modern frosted glass effect on cards
-- **Dynamic Themes** - Background changes based on weather:
-  -  Clear/Sunny - Golden yellow
-  -  Cloudy - Light blue-gray
-  -  Rainy - Deep blue
-  -  Snowy - Light cyan
-  -  Stormy - Dark purple
-- **Smooth Animations** - Fade-in, slide-up, bounce, and pop-in effects
-- **Responsive Grid** - 5 columns (desktop), 3 columns (tablet), 2 columns (mobile)
 
 ##  Responsive Breakpoints
 
